@@ -1,0 +1,557 @@
+/* ===== Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #0a0a0a;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* ===== African Pattern Background ===== */
+  .bg-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+      url('https://www.transparenttextures.com/patterns/african-leaves.png');
+    z-index: -2;
+  }
+  
+  /* ===== Navigation ===== */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #ff9500;
+  }
+  
+  .logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  
+  .logo .nairobi {
+    color: #ff9500;
+  }
+  
+  .logo .music-week {
+    color: #fff;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ff9500;
+  }
+  
+  .cta-nav {
+    background: #ff9500;
+    color: #000 !important;
+    padding: 0.7rem 1.8rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: transform 0.3s;
+  }
+  
+  .cta-nav:hover {
+    transform: scale(1.05);
+    color: #000;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* ===== Hero Section ===== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    padding-top: 100px;
+  }
+  
+  .hero-content {
+    flex: 1;
+    padding-right: 3rem;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+  
+  .hero h1 span {
+    color: #ff9500;
+  }
+  
+  .hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .cta-button {
+    background: #ff9500;
+    color: #000;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .ghost-button {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .cta-button:hover {
+    background: #ffaa33;
+    transform: translateY(-3px);
+  }
+  
+  .ghost-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  .hero-image {
+    flex: 1;
+    position: relative;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(255, 149, 0, 0.2);
+    transform: perspective(1000px) rotateY(-15deg);
+    transition: transform 0.5s;
+  }
+  
+  .hero-image:hover img {
+    transform: perspective(1000px) rotateY(-5deg);
+  }
+  
+  /* ===== Lineup Section ===== */
+  .lineup {
+    padding: 6rem 5%;
+  }
+  
+  .lineup h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+  }
+  
+  .lineup h2 span {
+    color: #ff9500;
+  }
+  
+  .artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .artist-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s;
+    position: relative;
+  }
+  
+  .artist-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 149, 0, 0.3);
+  }
+  
+  .artist-img {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .artist-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .artist-card:hover .artist-img img {
+    transform: scale(1.1);
+  }
+  
+  .artist-card h3 {
+    padding: 1.5rem 1rem 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .artist-card .day {
+    padding: 0 1rem 1.5rem;
+    color: #ff9500;
+    font-weight: 500;
+  }
+  
+  /* ===== Schedule Section ===== */
+  .schedule {
+    padding: 6rem 5%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .schedule h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+  }
+  
+  .schedule h2 span {
+    color: #ff9500;
+  }
+  
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .day-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    border-top: 5px solid #ff9500;
+    transition: all 0.3s;
+  }
+  
+  .day-card:hover {
+    background: rgba(255, 149, 0, 0.1);
+  }
+  
+  .day-card.highlight-day {
+    border-top: 5px solid #ff2d75;
+  }
+  
+  .day-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+  
+  .day-card h3 span {
+    display: block;
+    font-size: 1.2rem;
+    color: #ff9500;
+    margin-top: 0.5rem;
+  }
+  
+  .highlight-day h3 span {
+    color: #ff2d75;
+  }
+  
+  .event {
+    padding: 1.2rem 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  }
+  
+  .event.highlight {
+    background: rgba(255, 149, 0, 0.1);
+    border-radius: 8px;
+    padding: 1.2rem;
+  }
+  
+  .event:last-child {
+    border-bottom: none;
+  }
+  
+  .event time {
+    display: block;
+    color: #ff9500;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .highlight-day time,
+  .event.highlight time {
+    color: #ff2d75;
+  }
+  
+  .event h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .event p {
+    opacity: 0.7;
+    font-size: 0.9rem;
+  }
+  
+  /* ===== Tickets Section ===== */
+  .tickets {
+    padding: 6rem 5%;
+  }
+  
+  .ticket-cards {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .ticket-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2.5rem;
+    width: 350px;
+    position: relative;
+    transition: all 0.3s;
+  }
+  
+  .ticket-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 149, 0, 0.2);
+  }
+  
+  .ticket-card.popular {
+    border: 2px solid #ff9500;
+  }
+  
+  .popular-badge {
+    position: absolute;
+    top: -15px;
+    right: 30px;
+    background: #ff9500;
+    color: #000;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .ticket-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+  
+  .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff9500;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ticket-card ul {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+  
+  .ticket-card ul li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .ticket-card ul li::before {
+    content: "✓";
+    color: #ff9500;
+    position: absolute;
+    left: 0;
+  }
+  
+  .ticket-card button {
+    width: 100%;
+    padding: 1rem;
+    background: #ff9500;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .ticket-card button:hover {
+    background: #ffaa33;
+  }
+  
+  /* ===== Footer ===== */
+  footer {
+    padding: 4rem 5%;
+    background: #000;
+    text-align: center;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: #ff9501;
+  }
+  
+  footer p {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+  }
+  
+  footer span {
+    color: #ff9500;
+    font-weight: 600;
+  }
+  
+  /* ===== Media Queries ===== */
+  @media (max-width: 1200px) {
+    .hero h1 {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 120px;
+    }
+    
+    .hero-content {
+      padding-right: 0;
+      margin-bottom: 3rem;
+    }
+    
+    .hero-buttons {
+      justify-content: center;
+    }
+    
+    .hero-image {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      position: fixed;
+      top: 90px;
+      left: -100%;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.95);
+      padding: 2rem 0;
+      transition: left 0.3s;
+    }
+    
+    .nav-links.active {
+      left: 0;
+    }
+    
+    .menu-toggle {
+      display: block;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .artist-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .ticket-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .cta-button,
+    .ghost-button {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .artist-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .ticket-card {
+      width: 100%;
+    }
+  }

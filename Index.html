@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nairobi Music Week 2023 | Africa's Biggest Festival</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- African Pattern Background -->
+  <div class="bg-pattern"></div>
+
+  <!-- Navigation (Flexbox) -->
+  <nav class="navbar">
+    <div class="logo">
+      <span class="nairobi">NAIROBI</span>
+      <span class="music-week">MUSIC WEEK</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#lineup">Lineup</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#tickets" class="cta-nav">Get Tickets</a></li>
+    </ul>
+    <button class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>AFRICA'S <span>BIGGEST</span> MUSIC EXPERIENCE</h1>
+      <p>December 10-16, 2023 | Nairobi National Park</p>
+      <div class="hero-buttons">
+        <a href="#tickets" class="cta-button">VIP Passes</a>
+        <a href="#lineup" class="ghost-button">See Artists</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Music Festival Crowd">
+    </div>
+  </section>
+
+  <!-- Lineup Section -->
+  <section class="lineup" id="lineup">
+    <h2>HEADLINING <span>ARTISTS</span></h2>
+    <div class="artist-grid">
+      <!-- Artist 1 -->
+      <div class="artist-card">
+        <div class="artist-img">
+          <img src="https://earth-agency.com/app/uploads/2023/07/Bien-Photoshoot-207_AR-scaled.jpg" alt="Bien">
+        </div>
+        <h3>Bien</h3>
+        <p class="day">Day 1: Afro Fusion</p>
+      </div>
+      
+      <!-- Artist 2 -->
+      <div class="artist-card">
+        <div class="artist-img">
+          <img src="https://www.capitalfm.co.ke/thesauce/files/2024/11/IMG_7906-2048x1365.jpg" alt="Njerae">
+        </div>
+        <h3>Njerae</h3>
+        <p class="day">Day 2: R&B Soul</p>
+      </div>
+      
+      <!-- Artist 3 -->
+      <div class="artist-card">
+        <div class="artist-img">
+          <img src="https://lastfm.freetls.fastly.net/i/u/770x0/bbdc1a06b97059351a4af36aff4c0a57.jpg#bbdc1a06b97059351a4af36aff4c0a57" alt="Khaligraph Jones">
+        </div>
+        <h3>Khaligraph Jones</h3>
+        <p class="day">Day 3: Hip Hop</p>
+      </div>
+      
+      <!-- Artist 4 -->
+      <div class="artist-card">
+        <div class="artist-img">
+          <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSEO0OzbRG26F8JKcV4lcaosgvUTX9shX9dYWRHh5l5g_q_I7IgE_sUvLvMrGGIh3o5VADtmkZ5b_QtjhmkHQnU_g" alt="Kinoti">
+        </div>
+        <h3>Kinoti</h3>
+        <p class="day">Day 4: Genge</p>
+      </div>
+      
+      <!-- Artist 5 -->
+      <div class="artist-card">
+        <div class="artist-img">
+          <img src="https://mdundo.com/media/articles/1680080633_9001_b.jpg" alt="Sauti Sol">
+        </div>
+        <h3>Sauti Sol</h3>
+        <p class="day">Day 5: Afro Pop</p>
+      </div>
+      
+      <!-- Artist 6 -->
+      <div class="artist-card">
+        <div class="artist-img">
+          <img src="https://cdn.standardmedia.co.ke/images/wysiwyg/images/pLn2e_savara.JPG" alt="Savara">
+        </div>
+        <h3>Savara</h3>
+        <p class="day">Day 6: Electronic</p>
+      </div>
+      
+      <!-- Artist 7 -->
+      <div class="artist-card">
+        <div class="artist-img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNuIzqHy00giRA7Bsvx9Muv17l6NyqE2xZoQ&s" alt="Charisma">
+        </div>
+        <h3>Charisma</h3>
+        <p class="day">Day 7: Closing Party</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Week Schedule (CSS Grid) -->
+  <section class="schedule" id="schedule">
+    <h2>FULL WEEK <span>SCHEDULE</span></h2>
+    <div class="schedule-grid">
+      <!-- Day 1 -->
+      <div class="day-card">
+        <h3>DAY 1 <span>AFRO FUSION</span></h3>
+        <div class="event">
+          <time>6:00 PM</time>
+          <h4>Bien Live Performance</h4>
+          <p>Main Stage</p>
+        </div>
+        <div class="event">
+          <time>8:30 PM</time>
+          <h4>Nyashinski Special Guest</h4>
+        </div>
+      </div>
+      
+      <!-- Day 2 -->
+      <div class="day-card highlight-day">
+        <h3>DAY 2 <span>R&B SOUL</span></h3>
+        <div class="event">
+          <time>8:00 PM</time>
+          <h4>Njerae Live</h4>
+          <p>With full band</p>
+        </div>
+        <div class="event">
+          <time>9:00 PM</time>
+          <h4>Xenia Manasseh</h4>
+        </div>
+      </div>
+      
+      <!-- Day 3 -->
+      <div class="day-card">
+        <h3>DAY 3 <span>HIP HOP</span></h3>
+        <div class="event highlight">
+          <time>7:30 PM</time>
+          <h4>Khaligraph Jones</h4>
+          <p>Main Stage</p>
+        </div>
+        <div class="event">
+          <time>9:30 PM</time>
+          <h4>Octopizzo</h4>
+        </div>
+      </div>
+      
+      <!-- Day 4 -->
+      <div class="day-card">
+        <h3>DAY 4 <span>GENGE</span></h3>
+        <div class="event">
+          <time>7:00 PM</time>
+          <h4>Kinoti</h4>
+        </div>
+        <div class="event">
+          <time>9:00 PM</time>
+          <h4>Mejja</h4>
+        </div>
+      </div>
+      
+      <!-- Day 5 -->
+      <div class="day-card highlight-day">
+        <h3>DAY 5 <span>AFRO POP</span></h3>
+        <div class="event">
+          <time>6:30 PM</time>
+          <h4>Sauti Sol</h4>
+          <p>Full Band Performance</p>
+        </div>
+      </div>
+      
+      <!-- Day 6 -->
+      <div class="day-card">
+        <h3>DAY 6 <span>ELECTRONIC</span></h3>
+        <div class="event">
+          <time>8:00 PM</time>
+          <h4>Savara</h4>
+          <p>DJ Set</p>
+        </div>
+        <div class="event">
+          <time>10:00 PM</time>
+          <h4>Coco Em</h4>
+        </div>
+      </div>
+      
+      <!-- Day 7 -->
+      <div class="day-card highlight-day">
+        <h3>DAY 7 <span>CLOSING PARTY</span></h3>
+        <div class="event">
+          <time>6:00 PM</time>
+          <h4>Charisma</h4>
+          <p>Main Stage</p>
+        </div>
+        <div class="event highlight">
+          <time>11:00 PM</time>
+          <h4>All-Star Finale</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tickets Section -->
+  <section class="tickets" id="tickets">
+    <div class="ticket-cards">
+      <div class="ticket-card">
+        <h3>Single Day Pass</h3>
+        <p class="price">KSh 3,500</p>
+        <ul>
+          <li>Access to 1 festival day</li>
+          <li>Standard viewing</li>
+          <li>Food vendors access</li>
+        </ul>
+        <button>Buy Now</button>
+      </div>
+      
+      <div class="ticket-card popular">
+        <div class="popular-badge">MOST POPULAR</div>
+        <h3>Weekend Pass</h3>
+        <p class="price">KSh 12,000</p>
+        <ul>
+          <li>3-day access (Fri-Sun)</li>
+          <li>Priority entry</li>
+          <li>VIP lounge access</li>
+        </ul>
+        <button>Buy Now</button>
+      </div>
+      
+      <div class="ticket-card">
+        <h3>Full Week Pass</h3>
+        <p class="price">KSh 25,000</p>
+        <ul>
+          <li>7-day full access</li>
+          <li>Front stage viewing</li>
+          <li>VIP lounge + bar</li>
+          <li>Artist meet & greet</li>
+        </ul>
+        <button>Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <p>© 2023 Nairobi Music Week. All rights reserved.</p>
+      <p>Powered by <span>MCSK</span> & <span>Ketebul Music</span></p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
