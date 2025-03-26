@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T3xNova</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    
+    body {
+      background-color: #f5e9e4;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+    }
+    
+    .brand-name {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    .auth-buttons {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .signin-btn {
+      font-size: 14px;
+      padding: 4px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .signin-btn:hover {
+      background-color: #e5e5e5;
+    }
+    
+    .signup-btn {
+      font-size: 14px;
+      padding: 4px 12px;
+      background-color: #000;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .signup-btn:hover {
+      background-color: #333;
+    }
+    
+    /* Main Brand */
+    .main-brand {
+      text-align: center;
+      padding: 16px 0;
+    }
+    
+    .main-brand h1 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .divider {
+      border-bottom: 1px solid #ccc;
+      margin-top: 16px;
+    }
+    
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 8px 0;
+      font-size: 14px;
+    }
+    
+    nav a:hover {
+      text-decoration: underline;
+    }
+    
+    .dashed-divider {
+      border-bottom: 1px dashed #b392d3;
+      margin: 0 16px;
+    }
+    
+    /* Slideshow */
+    .slideshow {
+      position: relative;
+      height: 128px;
+      background-color: #e5d9d4;
+      margin: 24px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .slideshow h2 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    
+    .arrow-left, .arrow-right {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    
+    .arrow-left {
+      left: 8px;
+    }
+    
+    .arrow-right {
+      right: 8px;
+    }
+    
+    /* Scenarios Section */
+    .scenarios {
+      padding: 16px;
+    }
+    
+    .section-title {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px;
+    }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    
+    @media (max-width: 768px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .product-card {
+      background-color: white;
+      padding: 16px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .product-image {
+      background-color: #e5e5e5;
+      aspect-ratio: 1 / 1;
+      margin-bottom: 16px;
+    }
+    
+    .product-title {
+      font-weight: 500;
+    }
+    
+    .product-price {
+      font-size: 14px;
+    }
+    
+    .product-description {
+      font-size: 12px;
+      color: #777;
+      margin-top: 4px;
+    }
+    
+    .bottom-divider {
+      border-bottom: 1px solid #ccc;
+      margin-top: 32px;
+    }
+    
+    /* Footer */
+    footer {
+      margin-top: auto;
+      padding: 24px 16px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 16px;
+    }
+    
+    .social-icon {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .use-cases h3 {
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    
+    .use-cases ul {
+      list-style: none;
+      font-size: 14px;
+    }
+    
+    .use-cases li {
+      margin-bottom: 4px;
+    }
+    
+    @media (max-width: 768px) {
+      footer {
+        flex-direction: column;
+      }
+      
+      .social-icons {
+        margin-bottom: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="brand-name">
+      <a href="#">KichewaLtd</a>
+    </div>
+    <div class="auth-buttons">
+      <a href="#" class="signin-btn">SignIn</a>
+      <a href="#" class="signup-btn">SignUp</a>
+    </div>
+  </header>
+
+  <!-- Main Brand -->
+  <div class="main-brand">
+    <h1>T3xNova</h1>
+    <div class="divider"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Fabrics</a>
+    <a href="#">Scenarios</a>
+    <a href="#">Accessories</a>
+    <a href="#">Sales</a>
+    <a href="#">Contact Us</a>
+  </nav>
+  <div class="dashed-divider"></div>
+
+  <!-- Slideshow -->
+  <div class="slideshow">
+    <div class="arrow-left">&#10094;</div>
+    <h2>Slideshow</h2>
+    <div class="arrow-right">&#10095;</div>
+  </div>
+
+  <!-- Scenarios Section -->
+  <div class="scenarios">
+    <h2 class="section-title">Scenarios</h2>
+    
+    <!-- Product Cards -->
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-image"></div>
+        <h3 class="product-title">Text</h3>
+        <p class="product-price">$0</p>
+        <p class="product-description">Body text.</p>
+      </div>
+      
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image"></div>
+        <h3 class="product-title">Text</h3>
+        <p class="product-price">$0</p>
+        <p class="product-description">Body text.</p>
+      </div>
+      
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-image"></div>
+        <h3 class="product-title">Text</h3>
+        <p class="product-price">$0</p>
+        <p class="product-description">Body text.</p>
+      </div>
+    </div>
+    
+    <div class="bottom-divider"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="#" class="social-icon">&#10021;</a>
+      <a href="#" class="social-icon">&#9635;</a>
+      
+      <a href="#" class="social-icon">LinkedIn</a>
+    </div>
+    
+    <div class="use-cases">
+      <h3>Use cases</h3>
+      <ul>
+        <li>About Us</li>
+        <li>Conact Us</li>
+        <li>Wireframing</li>
+        
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
