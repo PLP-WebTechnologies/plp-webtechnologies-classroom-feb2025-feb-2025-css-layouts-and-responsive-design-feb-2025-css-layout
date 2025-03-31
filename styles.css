@@ -1,0 +1,118 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000000;
+  color: white;
+  padding: 15px 20px;
+}
+.logo {
+  width: 100px;
+  height: auto;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none; /* Hidden on larger screens */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Main Content Layout (Using Grid) */
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.content {
+  background: #f4f4f4;
+  padding: 20px;
+}
+.content h1,
+h2,
+p,
+li {
+  margin-bottom: 20px;
+}
+.sidebar {
+  background: #ddd;
+  padding: 20px;
+}
+
+/* Footer */
+/* Styling ID in the footer */
+#name {
+  transition: all 0.5s;
+  color: rgb(3, 112, 124);
+  cursor: pointer;
+}
+
+#name:hover {
+  color: rgb(124, 3, 3);
+  font-size: 2em;
+}
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+  }
+  .logo {
+    width: 50px;
+    height: auto;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle:hover + .nav-links {
+    display: flex;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
