@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+    box-sizing: border-box;
+  }
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    background-color:darksalmon;
+  }
+header {
+    background-color: #333;
+    color: white;
+  }
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+  }
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+.content-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+.main-content {
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+.sidebar {
+    background-color: #dcdcdc;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+footer {
+    background-color:grey;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 5rem;
+  }
+/* Desktop (≥1024px) */
+@media (min-width: 1024px) {
+        .navbar {
+        padding: 1.5rem 3rem;
+        }
+    
+        .nav-links {
+        gap: 2rem;
+        }
+    
+        .content-grid {
+        grid-template-columns: 4fr 1fr;
+        padding: 3rem;
+        }
+    
+        .main-content,
+        .sidebar {
+        padding: 2rem;
+        }
+    
+        footer {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+        }
+    }
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      width: 100%;
+    }
+  
+    .content-grid {
+      grid-template-columns: 1fr;
+      padding: 1.5rem;
+    }
+  
+    .main-content,
+    .sidebar {
+      padding: 1rem;
+    }
+  }
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+    .navbar {
+      padding: 1rem;
+    }
+  
+    .nav-links {
+      gap: 0.5rem;
+    }
+  
+    .content-grid {
+      padding: 1rem;
+    }
+  
+    .main-content,
+    .sidebar {
+      padding: 0.75rem;
+    }
+  
+    footer {
+      font-size: 0.9rem;
+      padding: 0.75rem;
+    }
+  }
