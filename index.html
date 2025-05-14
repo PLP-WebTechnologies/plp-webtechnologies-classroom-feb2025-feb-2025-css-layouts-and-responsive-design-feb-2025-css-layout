@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 1em;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .sidebar {
+            background-color: #ddd;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+            flex: 3;
+        }
+
+        .widget {
+            background-color: #eee;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Media Queries for Responsiveness */
+
+        /* Mobile View (up to 600px) */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column; /* Stack items vertically */
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul li {
+                margin: 0.5em 0;
+            }
+
+            .sidebar {
+                order: -1; /* Move sidebar above content */
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Tablet View (601px to 1024px) */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .container {
+                flex-direction: row; /* Keep items in a row */
+            }
+
+            .sidebar {
+                flex: 1;
+            }
+
+            .content {
+                flex: 2;
+            }
+        }
+
+        /* Desktop View (1025px and above) - Inherits default styles */
+    </style>
+</head>
+<body>
+
+    <nav>
+        <span>My Website</span>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <div class="widget">Widget 1</div>
+            <div class="widget">Widget 2</div>
+        </aside>
+
+        <main class="content">
+            <h1>Main Content</h1>
+            <p>This is the main content area of the webpage. It can contain articles, blog posts, or any other information you want to display.</p>
+            <p>Flexbox is used here to arrange the sidebar and content side by side on larger screens and stack them vertically on smaller screens.</p>
+            <p>Media queries in the CSS handle the responsive adjustments based on the screen width.</p>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Awesome Website</p>
+    </footer>
+
+</body>
+</html>
